@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Segitiga</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body> 
+    <div class="container">
+        <header>
+            <h1 id="title">Kalkulator Segitiga</h1>
+            
+            <button id="titleButton" onclick="changeTitleColor()">Software Engineering Fundamental Course RevoU by Rania</button>
+           
+        </header>
+        <main>
+            <section class="calculator">
+                <h2>Luas Segitiga</h2>
+                <img src="segitiga.jpg" alt="Gambar Segitiga" class="triangle-image">
+                <div class="formula">
+                    <p>Rumus Luas Segitiga:</p>
+                    <p>Luas = 1/2 × alas (a) × tinggi (t)</p>
+                    <p>Keterangan:</p>
+                    <ul>
+                        <li>a = Alas segitiga</li>
+                        <li>t = Tinggi segitiga</li>
+                    </ul>
+                </div>
+                <form id="areaForm">
+                    <label for="base">Alas (a):</label>
+                    <input type="number" id="base" required>
+                    <label for="height">Tinggi (t):</label>
+                    <input type="number" id="height" required>
+                    <button type="button" onclick="calculateArea()" class="orange-button">Hitung Luas Segitiga</button>
+                    <button type="button" onclick="resetAreaForm()" class="pink-button">Reset</button>
+                </form>
+                <div id="areaResult" class="result"></div>
+            </section>
+
+            <section class="calculator">
+                <h2>Keliling Segitiga</h2>
+                <img src="segitiga.jpg" alt="Gambar Segitiga" class="triangle-image">
+                <div class="formula">
+                    <p>Rumus Keliling Segitiga:</p>
+                    <p>Keliling = sisi A + sisi B + sisi C</p>
+                    <p>Keterangan:</p>
+                    <ul>
+                        <li>sisi A, sisi B, sisi C = Panjang sisi segitiga</li>
+                    </ul>
+                </div>
+                <form id="perimeterForm">
+                    <label for="sideA">Sisi A (a):</label>
+                    <input type="number" id="sideA" required>
+                    <label for="sideB">Sisi B (b):</label>
+                    <input type="number" id="sideB" required>
+                    <label for="sideC">Sisi C (c):</label>
+                    <input type="number" id="sideC" required>
+                    <button type="button" onclick="calculatePerimeter()" class="orange-button">Hitung Keliling Segitiga</button>
+                    <button type="button" onclick="resetPerimeterForm()" class="pink-button">Reset</button>
+                </form>
+                <div id="perimeterResult" class="result"></div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
